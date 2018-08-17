@@ -33,7 +33,7 @@ Van egy unit teszt, ami már rögtön az elején zöld, ezzel tudod ellenőrizni
 
 ### A projekt struktúra
 
-A feladatok során a fő hangsúly a unit teszteken van: ha azok zöldek, akkor minden OK. Vagyis nem kell feltétlenül minden feladathoz futtatható programot készíteni, elég, ha a ...Task végű osztályok tartalmát megírod úgy, hogy a unit tesztek zöldek legyenek. A unit teszt ilyen szempontból a programot helyettesíti: ugyanúgy tudod egyesével futtatni őket, debuggolni (jobb klikk a unit teszten a test explorerben).
+A feladatok során a fő hangsúly a unit teszteken van: ha azok zöldek, akkor minden OK. Vagyis nem kell feltétlenül minden feladathoz futtatható programot készíteni, elég, ha a ...Task végű osztályok tartalmát megírod úgy, hogy a unit tesztek zöldek legyenek. A unit teszt ilyen szempontból a programot helyettesíti: ugyanúgy tudod egyesével futtatni őket, debuggolni (jobb klikk a unit teszten a test explorerben). Ilyenkor a heti feladat megoldásához nem is szükséges új könyvtárat vagy projektet létrehozni, simán dolgozz a "Solutions" könyvtárába az Intro projektnek.
 
 De ha egy feladathoz nincsen unit teszt (például a félév elején lévőkhöz nincs), vagy ki szeretnéd egészíteni valami extrákkal, nyugodtan készíts hozzá egy új projektet, ami hivatkozik (Add reference...) az Intro-ra és akkor tudha hívni a benne lévő ...Task osztályokat.
 
