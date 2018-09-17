@@ -35,14 +35,14 @@ Van egy unit teszt, ami már rögtön az elején zöld, ezzel tudod ellenőrizni
 
 A feladatok során a fő hangsúly a unit teszteken van: ha azok zöldek, akkor minden OK. Vagyis nem kell feltétlenül minden feladathoz futtatható programot készíteni, elég, ha a ...Task végű osztályok tartalmát megírod úgy, hogy a unit tesztek zöldek legyenek. A unit teszt ilyen szempontból a programot helyettesíti: ugyanúgy tudod egyesével futtatni őket, debuggolni (jobb klikk a unit teszten a test explorerben). Ilyenkor a heti feladat megoldásához nem is szükséges új könyvtárat vagy projektet létrehozni, simán dolgozz a "Solutions" könyvtárába az Intro projektnek.
 
-De ha egy feladathoz nincsen unit teszt (például a félév elején lévőkhöz nincs), vagy ki szeretnéd egészíteni valami extrákkal, nyugodtan készíts hozzá egy új projektet, ami hivatkozik (Add reference...) az Intro-ra és akkor tudha hívni a benne lévő ...Task osztályokat.
+De ha egy feladathoz nincsen unit teszt (például a félév elején lévőkhöz nincs), vagy ki szeretnéd egészíteni valami extrákkal, nyugodtan készíts hozzá egy új projektet, ami hivatkozik (Add reference...) az Intro-ra és akkor tudja hívni a benne lévő ...Task osztályokat.
 
 # Feladatok hétről hétre
 Az első 2 héten közös előadások vannak, addig nincsen OpenCV-s feladat, bár ha van kedved, természetesen előre is dolgozhatsz. A feladatok egy részéhez kicsit utána is kell olvasni a dolgoknak (pl. az eróziónak, mint képmorfológiai művelet), ilyenkor a Google és az OpenCV dokumentáció egy jó kiinduló pont. Ha pedig megakadsz vele, szólj!
 
 ## 3. Hét: Bevezető
 OpenCV beizzítása C# alatt, webes dokumentáció (OpenCV 3.0) megkeresése, belenézés.
-GIT repository beüzelemése, ebben mindenki nyisson magának egy saját könyvtárat és abba dolgozzon.
+GIT repository beüzelemése (github classroom regisztráció), mindenkinek saját private repositoryja lesz az opencvtemalabor organization alatt. Ebbe dolgozzatok a témalabor keretében.
 Feladat: írjatok egy kis programot, mely parancssori paraméterként kap két fájlnevet (egy létező képet és egy kimeneti képfájlt), ezt betölti, rajzol neki egy sárga keretet, majd elmenti a 2. paraméterként kapott néven.
 https://youtu.be/aYuXU1p8u20
 
