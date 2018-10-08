@@ -58,6 +58,8 @@ Kapcsolódó unit teszt: még nincsen. Viszont ehhez a feladathoz már lehet ké
 ## 5. Hét: Foltok megszámolása
 Írj egy programot, mely megszámolja, hogy egy képen hány összefüggő folt van. A kis szakadások eltűntetéséhez először válaszd ki a fehér részeket, azokat dilatáld, majd számold meg őket. A számolás alapja a floodFill: kezdetben a háttér legyen mindenhol fekete “0”, az előtér “255”. Ezután indulj el a bal felső sarokból pixelenként, és ha egy pont 255, akkor abból a pontból kiindulva a floodFill segítségével színezd át minden pontját 0-ra, és növeld a számlálót 1-gyel. A képen végig érve minden fekete lesz és a számláló az eltűntetett foltok számát jelzi. (Látványosabb megoldás, ha eltérő színűre színezed a foltokat és akkor utána érdemes meg is jeleníteni.)
 
+A floodFill esetében mindig fontos kérdés a connectivity: egy pixelnek 4 vagy 8 szomszédja van? A unit tesztek 8-as connectivityt feltételeznek, vagyis egy átlós, 1 pixel széles vonal nem vág ketté foltokat, mert a pixelei között átlósan még "átfolyik" a festék.
+
 Miután megvan minden összefüggő folt, határozd meg a bennfoglaló téglalapjukat!
 Nagyon figyelj rá, hogy az OpenCV alatt a Mat pixeleinek indexelése ha nem pl. Point típussal történik, akkor sor-oszlop sorrendben következik, vagyis pl. a generic indexer esetében [y,x]! (Pixelek elérése gyorsan: https://github.com/shimat/opencvsharp/wiki/%5BCpp%5D-Accessing-Pixel)
 
