@@ -79,6 +79,12 @@ A MOG2 háttéreltávolító algoritmus segítségével egy videón keresd meg a
 
 Kapcsolódó unit tesztek (a további, sajátokat is ide írd meg): TestMotionTracking
 
+Kicsit részletesebben a tesztek működése:
+
+`Intro.TestImageGenerators.MotionTrackingAnimation.Motion` egy polygont tárol (ez lesz a mozgó alakzat), ami vezérlőpontokon ugrál végig (`MotionAnchorLocations`). A `MotionTrackingAnimation` ilyenekből tárol többet (`MotionTrackingAnimation`,`allMotions`). Mindig van egy aktuális közöttük (`currentMotion`), amire az `AddPoint` és hasonló "építő" metódusok vonatkoznak, vagyis amit még éppen most rakunk össze.
+A teszábra generátornak mindig össze kell rakni ilyen `Motion` példányokat, majd el lehet kérni az egyes képkockákat, amikre mindet szépen rárajzol. (Pl. egy két vezérlőpont között átmenő piros téglalap).
+A `TestMotionTracking.GenerateSingleMotion_Line` egy téglalapot (`var shape = GenerateRectangleAsPolygon()` fog végigmozgatni az `A` és `B` pont között (`AddLine` segítségével adja meg a köztes anchorLocation-öket). Majd az `assertDetection` tudja, hogy a `Motion`-nek éppen egy adott képkockán hol kell lennie, így tudja ellenőrizni, hogy az általatok megírandó detektor abban a pozícióban találta-e meg, ahova azt tényleg rajzoltuk.
+
 (Sajnos a MOG2 algoritmus a mostani OpenCvSharp alatt kicsit gyengélkedik, így lehet, hogy ez a feladat most kimarad.)
 
 ## 8. Hét: Képszegmentációk
