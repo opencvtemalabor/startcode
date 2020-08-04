@@ -25,6 +25,10 @@ A Slack arra van, hogy kérdezzetek rajta, osszátok meg, hogy miket találtatok
 ### Unit teszt alapú és "valódi adatok" irányvonal
 A lentebb olvasható heti feladatokból két féle van: az egyik egy unit teszt alapú, többnyire generált gépeken dolgozó irányvonal, a másik egy valós projektekből vett anyagokon dolgozik. Bármelyik héten bármelyiket választhatod. Amelyik szimpatikusabb. A unit teszt alapú megoldásnál a tesztek ellenőrzik, hogy jól oldottad-e meg a feladatot. A valódi adatsorokra ilyenek nincsennek, ott neked kell a futási eredmény alapján felmérni, hogy jó lett-e a megoldás.
 
+### Real World Track
+
+Ezen kívül ha van kedved összetettebb feladatokkal foglalkozni, ennek a heti feladatok után találsz összetettebb feladatokat (Real World Track), amik több hétig kitartanak és ezekkel akármelyik heteket helyettesítheted, csak előre jelezd, hogy most nem a standard heti feladattal szeretnél foglalkozni.
+
 ### Unit tesztek
 A unit teszt alapú feladatokhoz a kiindulási repositoryban egy kis keretprogram található, valamint egy csomó unit teszt. A feladatok elkészítése során a funkciók egy részét ezek a unit tesztek is ellenőrzik (de nem mindent). A félév során egyrészt ezeket a unit teszteket kell "bezöldíteni". Az elején minden unit teszt előtt van egy "Ignore" attribútum, hogy ne jelezzen hibát, ezeket természetesen el kell távolítani, amint a megoldásodat tesztelni szeretnéd. (Visual Studio alatt a Test Explorerben tudod lefuttatni a solution minden unit tesztjét. Ha esetleg itt semmi nem jelenik meg, fordítsd le a projektet és ellenőrizd, hogy a Teszt menüben a processzor architektúra ugyanarra van-e beállítva, mint amire a projekteket fordítod, pl. x64-re.)
 
@@ -137,3 +141,64 @@ Ezekhez a feladatokhoz nincsennek unit tesztek, viszont te készíts ezekhez is 
 
 ## 14. Hét: befejezés, konklúziók
 Közösen megnézzük az eredményeket, megbeszéljük a tapasztalatokat.
+
+# Real World Track
+
+Az OpenCV témalabor eredeti feladatsora (lásd README.md) mellett lehetőség van arra, hogy a vállalkozó kedvűek olyan feladatokkal foglalkozzanak, ami kevésbé absztrakt, bevezető jellegű, helyette sokkal közelebb van a "hétköznapi feladatokhoz". Természetesen a két út között váltani is lehet, nem kell előre eldönteni, hogy melyiken haladsz, csak választásodat jelezd előre.
+
+Az alábbi feladatok közül annyit válassz, hogy minden hétre legyen vagy a fentiekből, vagy innen feladat.
+
+## Kaleidoszkóp
+
+- Időigény: 2 hét
+- Alaptechnológia: videó beolvasás, remap függvény
+
+A feladat egy olyan program készítése, mely egy tetszőleges videóból egy olyan videót készít (vagy csak megjelenít), mintha egy kaleidoszkópon keresztül néznénk az eredetit.
+
+A kaleidoszkóp előre meghatározott egyenesek mentén tükrözi a képet. A remap függvény számára minden pixelre meg lehet adni, hogy mely pixelből másolja oda a színt, így a leképezést előre kiszámítva a videó egyes képkockáin ezt már nagyon gyorsan végre tudja hajtani.
+
+## Harry Potter hopponálás
+
+- Időigény: 3 hét
+- Alaptechnológiák: videó beolvasás, háttéreltávolítás (két kép különbségével, chroma key vagy MOG2 módszerrel), remap, maszkolás
+
+A Harry Potter filmekben a hopponálást lehetne úgy utánozni, hogy egy rögzített kamerával felveszünk alakit, de úgy, hogy előtte csak a hátteret vesszük fel, majd az ehhez viszonyított eltéréssel megkeressük a szereplőt. Ezeket a pixeleket egy a kaleidoszkóp feladathoz hasonlóan a remap segítségével egy szűkülő spirál mentén "forgatjuk" befelé.
+
+## Varázspálcával írás a képre
+
+- Időigény: 2 hét
+- Alaptechnológiák: thresholding, HSV színrendszer, cvtColor
+
+Tanító videó készítésnél hasznos, ha szemben állva a kamerával egy kezünkben tartott varázspálca hegye nyomot hagy a videó képen (pl. 5 másodpercig). Ehhez az kell, hogy a varázspálca vége jellegzetes és könnyen megtalálható színű legyen. A program minden képkockán megkeresi ezt a foltot, és a következő valahány képen.
+
+## Forgalomszámlálás
+
+- Időigény: 3 hét
+- Alaptechnológia: MOG2, floodfill (összefüggő foltok keresésére)
+
+A forgalomszámlálás elég nagy szakterület, de a MOG2 háttéreltávolító algoritmust nagyon jól lehet használni felülnézeti képek esetén. Érdemes először olyan videóval kezdeni, amin a felülnézet miatt a járművek között végig látható az útburkolat, vagyis nincsennek átfedések, takarások.
+
+A megoldáshoz készíts például az egyik budapesti hídról egy stabilan tartott telefonnal egy videót, ahogy alattad átmennek az autók. (Szabadság híd, Erzsébet híd kiváló erre.) Nézz utána, hogyan működik (nem csak mit csinál!) a MOG2 algoritmusa az OpenCV-nek és üzemeld be a videóra, majd számold meg, hány összefüggő folt mozog a videón.
+
+## Kamera kalibráció és 3D helymeghatározás
+
+- Időigény: 2 hét
+- Alaptechnológiák: kamera kalibráció, háromszögelés
+
+Két kamerát sakktáblával kalibrálva minden kamerára meg lehet határozni, hogy hozzá képest egy objektum (pl. feltűnő színű labda) merre van. Ha ismerjük a két kamera helyét (a kalibráció meg fogja ezt adni a sakktábla minta koordináta rendszerében), akkor az ezekből indított félegyenesek metszéspontjában van az objektum. Így lehet két kamerával 3D pozíciót meghatározni. A feladat ennek kipróbálása, beüzemelése.
+
+[https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html](https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html)
+
+## Fotó vagy videó vízjelezése
+
+- Időigény: 1 hét
+- Alaptechnológiák: alpha blending (képek súlyozott összeadása), színrendszerek (főleg HSV)
+
+A vízjel lehet például egy felirat vagy másik kép, amit egy videó minden képkockájára rákeverünk. Lehet súlyozott összeadással, vagy úgy is, hogy HSV színtérben a vízjel helyén a Value értéket (világosság) lecsökkentjük az érintett pixeleken. (De egyébként számos más transzformációt is el lehet képzelni... például milyen, ha a Hue értéket forgatjuk el egy kicsit a vízjel által érintett pixeleken.)
+
+## Folytonos textúra készítést segítő program
+
+- Időigény: 1 hét
+- Alaptechnológiák: Mat másolása, RoI használata (Region of Interest, a kép egy téglalap alakú részlete, amit a Mat el tud tárolni.)
+
+Ha valaki folytonosan csempéző textúrát szeretne rajzolni, akkor a határokon látható egyenes "illesztési hibát" úgy lehet könnyen lekerülni, hogy a texúra megrajzolása után negyedeljük (függőlegesen és vízszintesen is felezve), minden negyedet áthelyezzük az átlósan túloldalra és elmentjük a képet. Ezen rajzprogrammal javítva, a határokat elsimítva olyan textúrát kapunk, aminél nem látszanak majd az illesztési hibák.
