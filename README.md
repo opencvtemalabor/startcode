@@ -171,6 +171,10 @@ A Harry Potter filmekben a hopponálást lehetne úgy utánozni, hogy egy rögz�
 
 Tanító videó készítésnél hasznos, ha szemben állva a kamerával egy kezünkben tartott varázspálca hegye nyomot hagy a videó képen (pl. 5 másodpercig). Ehhez az kell, hogy a varázspálca vége jellegzetes és könnyen megtalálható színű legyen. A program minden képkockán megkeresi ezt a foltot, és a következő valahány képen.
 
+## Telefonos portrait videó 4:3-ban
+
+Biztos láttatok már olyan videót, amit telefonnal vettek fel portrait módban és utána youtubeon fent van 4:3 vagy 16:9 arányban. De hogy ne legyen nagy fekete valami két oldalt, oda szoktás másolni keretnek az eredeti kép egy elhalványított, teljes szélességre széthúzott verzióját (aminek így jó eséllyel hiányzik a teleje és az alja, de az nem is nagy gond). Ezzek a feladatnak a célja ezt reprodukálni. Bemenete egy portrait képarányú videó, a kimenete pedig egy így elkészített 4:3 vagy 16:9 arányú videó.
+
 ## Forgalomszámlálás
 
 - Időigény: 3 hét
