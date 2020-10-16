@@ -68,7 +68,7 @@ Kapcsolódó unit teszt: még nincsen. Viszont ehhez a feladathoz már lehet ké
 A floodFill esetében mindig fontos kérdés a connectivity: egy pixelnek 4 vagy 8 szomszédja van? A unit tesztek 8-as connectivityt feltételeznek, vagyis egy átlós, 1 pixel széles vonal nem vág ketté foltokat, mert a pixelei között átlósan még "átfolyik" a festék.
 
 Miután megvan minden összefüggő folt, határozd meg a bennfoglaló téglalapjukat (mindnek együtt a közös bennfoglaló téglalapot)!
-Nagyon figyelj rá, hogy az OpenCV alatt a Mat pixeleinek indexelése ha nem pl. Point típussal történik, akkor sor-oszlop sorrendben következik, vagyis pl. a generic indexer esetében [y,x]! (Pixelek elérése gyorsan: https://github.com/shimat/opencvsharp/wiki/%5BCpp%5D-Accessing-Pixel)
+Nagyon figyelj rá, hogy az OpenCV alatt a Mat pixeleinek indexelése ha nem pl. Point típussal történik, akkor sor-oszlop sorrendben következik, vagyis pl. a generic indexer esetében [y,x]! (Pixelek elérése gyorsan: https://github.com/shimat/opencvsharp/wiki/Accessing-Pixel)
 
 Kapcsolódó unit tesztek (és a további, sajátokat is ide írd meg): TestBoundingBox
 
