@@ -18,9 +18,8 @@ A Github classroom meghívó linket kockázatos itt megosztani, de bárkinek sz�
 Minden héten az elkészült feladatokat github pull request formájában adjátok le, legkésőbb a hét végéig. Ha a valós adatok irányát választjátok, a pull request leírásába tegyetek be egy kimeneti képet vagy screenshotot is, hogy lássam, milyen lett az eredmény. (Nyugodtan írhatsz hozzá pár mondatot is, ha van valami hozzáfűzni való.)
 
 ### Kommunikáció
-Ebben a félévben kísérleti jelleggel nem egy levlistát fogunk használni, hanem Slacket, mint az iparban ilyen célra leginkább elterjedt kommunikációs platformok egyikét. A csoport meghívásos jellegű.
-
-A Slack arra van, hogy kérdezzetek rajta, osszátok meg, hogy miket találtatok. Nem egyedül kell rájönni mindenre, de azért ne is oldjátok meg egymás helyett a feladatokat. Ja és nem csak egy helyes megoldás van! Ha valamit nem tudtok eldönteni, válasszátok a logikusabbnak tűnő megoldást. Aztán utána megbeszéljük, ki mire jutott.
+A kommunikáció elsődleges formája a tanszéki Teams csoport private csatornája.
+Az a csatorna arra van, hogy kérdezzetek rajta, osszátok meg, hogy miket találtatok. Nem egyedül kell rájönni mindenre, de azért ne is oldjátok meg egymás helyett a feladatokat. Ja és nem csak egy helyes megoldás van! Ha valamit nem tudtok eldönteni, válasszátok a logikusabbnak tűnő megoldást. Aztán utána megbeszéljük, ki mire jutott.
 
 ### Unit teszt alapú és "valódi adatok" irányvonal
 A lentebb olvasható heti feladatokból két féle van: az egyik egy unit teszt alapú, többnyire generált gépeken dolgozó irányvonal, a másik egy valós projektekből vett anyagokon dolgozik. Bármelyik héten bármelyiket választhatod. Amelyik szimpatikusabb. A unit teszt alapú megoldásnál a tesztek ellenőrzik, hogy jól oldottad-e meg a feladatot. A valódi adatsorokra ilyenek nincsennek, ott neked kell a futási eredmény alapján felmérni, hogy jó lett-e a megoldás.
@@ -127,7 +126,7 @@ A turkmesz egy kis véges állapotú automata jószág, ami egy képen mozog asz
 
 Kapcsolódó unit tesztek (a további, sajátokat is ide írd meg): TestTurkmesz
 
-**Valós adatok** feladat ehhez a héthez nem tartozik. Cserébe ha van kedved, készíts egy szép Turkmesz képet valami speciális mozgási szabállyal és postold be a Slackre, hogy lássuk, kié lesz a legszebb! Ki tervezi a legcselesebb mozgási szabályt? :)
+**Valós adatok** feladat ehhez a héthez nem tartozik. Cserébe ha van kedved, készíts egy szép Turkmesz képet valami speciális mozgási szabállyal és postold be a Teamsre, hogy lássuk, kié lesz a legszebb! Ki tervezi a legcselesebb mozgási szabályt? :)
 
 ## 12.-13. Hét: saját feladat
 Mindenkivel egyeztetünk egy saját, kedvére való kisfeladatot, amit elkészít. Néhány példa:
