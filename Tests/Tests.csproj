@@ -82,12 +82,6 @@
     <Compile Include="TestTurkmesz.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Intro\Intro.csproj">
-      <Project>{B52B64A0-E135-4120-B5D8-D222CBCB44B4}</Project>
-      <Name>Intro</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

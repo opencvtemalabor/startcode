@@ -7,3 +7,5 @@ Tests/obj/*
 *.suo
 *.ide
 /.vs/*
+/Testing/bin/*
+/Testing/obj/*

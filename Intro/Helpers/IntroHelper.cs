@@ -14,8 +14,7 @@ namespace Intro.Helpers
         {
             if (image.Type() != MatType.CV_8UC3)
                 throw new ArgumentException("Only CV_8UC3 images are supported...");
-            MatOfByte3 mob3 = new MatOfByte3(image);
-            var indexer = mob3.GetIndexer();
+            var indexer = image.GetGenericIndexer<Vec3b>();
             Vec3b color = indexer[p.Y, p.X];
             return color;
         }
